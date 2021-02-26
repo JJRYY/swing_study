@@ -57,7 +57,6 @@ public class DeptPanel extends JPanel {
 		tfDeptNo.setText(department.getDeptNo() + "");
 		tfDeptName.setText(department.getDeptName());
 		tfFloor.setText(department.getFloor() + "");
-		
 	}
 	
 	public void clearTf() {

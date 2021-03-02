@@ -22,7 +22,7 @@ public class FrameComponentEx extends JFrame implements ActionListener {
 	private JButton btn2;
 	private JButton btn3;
 	private JButton btn1;
-	private JButton btn_1;
+	
 	
 	public FrameComponentEx() {
 		initialize();
@@ -49,16 +49,17 @@ public class FrameComponentEx extends JFrame implements ActionListener {
 		contentPane.add(btn3);
 	}
 	public JButton createBtn() {
-		btn_1 = new JButton("Magenta/Yellow Button");
-		btn_1.addActionListener(this);
-		btn_1.setForeground(Color.MAGENTA);
-		btn_1.setFont(new Font("Arial", Font.BOLD | Font.ITALIC, 20));
-		btn_1.setBackground(Color.YELLOW);
-		return btn_1;
+		JButton btn;
+		btn = new JButton("Magenta/Yellow Button");
+		btn.addActionListener(this);
+		btn.setForeground(Color.MAGENTA);
+		btn.setFont(new Font("Arial", Font.BOLD | Font.ITALIC, 20));
+		btn.setBackground(Color.YELLOW);
+		return btn;
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == btn_1) {
+		if (e.getSource() == btn1) {
 			actionPerformedBtn(e);
 		}
 		if (e.getSource() == btn2) {
@@ -85,8 +86,8 @@ public class FrameComponentEx extends JFrame implements ActionListener {
 			btn1 = null;
 			revalidate(); // 삭제후 변경적용
 		} else {
-			JButton btn = createBtn();
-			contentPane.add(btn, 0);
+			btn1 = createBtn();
+			contentPane.add(btn1, 0);
 			revalidate();
 		}
 		

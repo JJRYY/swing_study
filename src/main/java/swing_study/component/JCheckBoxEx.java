@@ -3,6 +3,7 @@ package swing_study.component;
 import java.awt.GridLayout;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.util.ArrayList;
 
 import javax.swing.BoxLayout;
 import javax.swing.JCheckBox;

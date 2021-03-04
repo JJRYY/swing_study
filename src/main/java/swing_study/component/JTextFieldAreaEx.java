@@ -127,16 +127,21 @@ public class JTextFieldAreaEx extends JFrame implements ActionListener {
 	}
 	
 	protected void actionPerformedBtnAdd(ActionEvent e) {
-		if (lblConfirm.getText().equals("일치")) {
-			Date d = dateChooser.getDate();
-			String msg = String.format("%s - %tF%n", tfName.getText(), d);
-			ta.append(msg);
-			clearTf();
+		if (tfName.getText().equals("")) {
+			JOptionPane.showMessageDialog(null, "이름을 입력하세요");
+			tfName.requestFocus();
 		} else {
-			JOptionPane.showMessageDialog(null, "비밀번호 불일치");
-			pfPass2.setText("");
-			pfPass1.requestFocus();
-			pfPass1.selectAll();
+			if (lblConfirm.getText().equals("일치")) {
+				Date d = dateChooser.getDate();
+				String msg = String.format("%s - %tF%n", tfName.getText(), d);
+				ta.append(msg);
+				clearTf();
+			} else {
+				JOptionPane.showMessageDialog(null, "비밀번호 불일치");
+				pfPass2.setText("");
+				pfPass1.requestFocus();
+				pfPass1.selectAll();
+			}
 		}
 	}
 	

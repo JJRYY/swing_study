@@ -101,6 +101,7 @@ public class JComboBoxEx3 extends JFrame implements ActionListener {
 		
 		DefaultComboBoxModel<Department> model = (DefaultComboBoxModel<Department>) cmbDept.getModel();
 		model.addElement(addDept);
+		deptList.add(addDept);
 		
 		pDept.clearTf();
 		JOptionPane.showMessageDialog(null, "추가되었습니다.");

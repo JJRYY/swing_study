@@ -298,13 +298,13 @@ public class SwingMain extends JFrame implements ActionListener {
 		pTabbedpane.add(btn17);
 		
 		btn18 = new JButton("JTable");
-		btn18.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				JOptionPane.showMessageDialog(null, e.getPoint());
-			}
-			
-		});
+//		btn18.addMouseListener(new MouseAdapter() {
+//			@Override
+//			public void mouseClicked(MouseEvent e) {
+//				JOptionPane.showMessageDialog(null, e.getPoint());
+//			}
+//			
+//		});
 //		btn18.addActionListener(this);
 		btn18.addActionListener(new ActionListener() {
 			@Override

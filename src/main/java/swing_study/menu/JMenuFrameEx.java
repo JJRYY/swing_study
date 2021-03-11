@@ -86,6 +86,7 @@ public class JMenuFrameEx extends JFrame implements ActionListener {
 		if (imgLabel.getIcon() != null) 
 			return;
 		ImageIcon icon = new ImageIcon(imgPath + "1038.jpg");
+		// 이미지 사이즈를 레이블 사이즈에 맞게 변경
 		Image changeIcon = icon.getImage().getScaledInstance(imgLabel.getWidth(), imgLabel.getHeight(), Image.SCALE_SMOOTH);
 		imgLabel.setIcon(new ImageIcon(changeIcon));
 	}

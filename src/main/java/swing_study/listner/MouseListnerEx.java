@@ -21,20 +21,21 @@ public class MouseListnerEx extends JFrame{
 		setTitle("마우스리스너");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
+		
 		contentPane = new JPanel();
-		la.addMouseListener(new MyMouseListner());
+		contentPane.addMouseListener(new MyActionListner());
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		la = new JLabel("Hello");
-		la.setBounds(62, 69, 57, 15);
+		la.setBounds(43, 45, 57, 15);
 		contentPane.add(la);
 		
 		
 	}
 	
-	class MyMouseListner implements MouseListener{
+	class MyActionListner implements MouseListener{
 
 		@Override
 		public void mouseClicked(MouseEvent e) {}
